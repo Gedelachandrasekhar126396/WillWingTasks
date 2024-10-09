@@ -13,7 +13,8 @@ public class StudentsEligible {
           
 		for(Integer id:InputStd.keySet() ) {
 			int marks = InputStd.get(id);
-			if(marks>=90) 	EligibleList.put(id,"Gold");
+			if(marks>=90) 	
+				EligibleList.put(id,"Gold");
 			else	if(marks>=80 && marks<90) EligibleList.put(id,"Silver");
 			else if(marks>=70 && marks<80) EligibleList.put(id,"Bronze");
 			
