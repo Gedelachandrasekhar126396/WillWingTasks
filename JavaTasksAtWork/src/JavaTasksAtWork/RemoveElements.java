@@ -9,7 +9,7 @@ public class RemoveElements {
     }
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-    ArrayList<String> Array1 = new ArrayList<String>(Arrays.asList("Tata","Mahindra","Maruthi",
+    ArrayList<String> Array1 = new ArrayList<String>(Arrays.asList("Tata","Mahindra","Maruthi","Reader",
     		"BMW","Jagvar"));
    
     
