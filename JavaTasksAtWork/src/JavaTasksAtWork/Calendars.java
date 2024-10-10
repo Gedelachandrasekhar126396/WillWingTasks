@@ -48,7 +48,7 @@ System.out.println("Please Enter the date in dd/mm/yyyy foramt");
        
       Calendars getCalendar = new Calendars();
    String weekday =   getCalendar.getDayofWeek(date);
-   System.out.println("He was born on "+weekday);
+   System.out.println("He/She was born on "+weekday);
 	}
 
 }
