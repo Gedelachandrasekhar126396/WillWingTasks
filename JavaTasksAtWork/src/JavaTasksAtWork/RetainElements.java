@@ -13,7 +13,7 @@ public class RetainElements {
     		"BMW","Jagvar"));
    
     
-    ArrayList<String> Array2 = new ArrayList<String>(Arrays.asList("BMW","Jagvar","SKODA","Audi",
+    ArrayList<String> Array2 = new ArrayList<String>(Arrays.asList("BMW","Jagvar","SKODA","Audi",  
     		"Landrover"));
    
     
