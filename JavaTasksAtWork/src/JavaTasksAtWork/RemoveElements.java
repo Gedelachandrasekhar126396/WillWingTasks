@@ -13,7 +13,7 @@ public class RemoveElements {
     		"BMW","Jagvar"));
    
     
-    ArrayList<String> Array2 = new ArrayList<String>(Arrays.asList("BMW","Jagvar","SKODA"));
+    ArrayList<String> Array2 = new ArrayList<String>(Arrays.asList("BMW","Jagvar","SKODA","Audi"));
    
     
    Array1.removeAll(Array2);
