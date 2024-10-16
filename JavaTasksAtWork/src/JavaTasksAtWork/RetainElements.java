@@ -2,9 +2,13 @@ package JavaTasksAtWork;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class RetainElements {
-    void removeElements() {
+    List<String> retainElements(List<String> List1,List<String> List2) {
+    	List1.retainAll(List2);
+    	return List1;
+    //	System.out.println(List1);
     	
     }
 	public static void main(String[] args) {
@@ -16,10 +20,10 @@ public class RetainElements {
     ArrayList<String> Array2 = new ArrayList<String>(Arrays.asList("BMW","Jagvar","SKODA","Audi",  
     		"Landrover"));
    
+ 
     
-   Array1.retainAll(Array2);
-   System.out.println(Array1);
- //  System.out.println(Array2);
+   RetainElements retain = new RetainElements();
+  System.out.println( retain.retainElements(Array1,Array2));;
 	}
 
 }
