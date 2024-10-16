@@ -17,11 +17,12 @@ public class GetDayofWeek {
             if(isValid) {
             	//System.out.println("Entered a Valid Date");
             	Calendar calendar = Calendar.getInstance();
-            	String [] dateSplit = dateString.split("-");
-            	int day = Integer.parseInt(dateSplit[0]);
-            	int month = Integer.parseInt(dateSplit[1]);
-            	int year = Integer.parseInt(dateSplit[2]);
-                 calendar.set(year, month-1,day);
+//            	String [] dateSplit = dateString.split("-");
+//            	int day = Integer.parseInt(dateSplit[0]);
+//            	int month = Integer.parseInt(dateSplit[1]);
+//            	int year = Integer.parseInt(dateSplit[2]);
+            	calendar.setTime(date);
+                // calendar.set(year, month-1,day);
                  int dayWeek = calendar.get(Calendar.DAY_OF_WEEK);
                  String dayOfWeek = "";
                  switch(dayWeek) {
