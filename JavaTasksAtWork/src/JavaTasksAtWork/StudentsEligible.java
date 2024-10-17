@@ -47,7 +47,7 @@ public class StudentsEligible {
 
 	//System.out.println(Students);
 	
-   int num= Students.get(1);
+ //  int num= Students.get(1);
 //   System.out.println(num);
    
    StudentsEligible studentsList = new StudentsEligible();
