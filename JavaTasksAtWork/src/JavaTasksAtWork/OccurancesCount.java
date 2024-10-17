@@ -5,17 +5,42 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+
+
 public class OccurancesCount {
+	
+	// OCCURANCES COUNT MENTHOD
     int occurancesCount(String str, String str2) {
+    	String s3 = str.toLowerCase();
+    	String s4 = str2.toLowerCase();
     	int count =0;
-    	Pattern pattern = Pattern.compile(str2);
-    	Matcher matcher =  pattern.matcher(str);
+    	Pattern pattern = Pattern.compile(s4);
+    	Matcher matcher =  pattern.matcher(s3);
     	while(matcher.find()) {
     		count++;
     	}
     	 
-    
+    System.out.println(count);
     	return count;
+    }
+    
+    
+   // FIRST OCCURANCE METHOD 
+ static int    firstOccurance(String s1, String s2) {
+    	String s3 = s1.toLowerCase();
+    	String s4 = s2.toLowerCase();
+    	int firstOccur =0;
+    	 firstOccur = s3.indexOf(s4);
+    	// System.out.println(s3+" "+s4);
+    	//System.out.println("indexFirst "+firstOccur);
+    	return firstOccur;
+    }
+static  int   lastIndexFind(String string1, String string2) {
+    	String p1 = string1.toLowerCase();
+    	String p2 = string2.toLowerCase();
+    	int lastOccurance = p1.lastIndexOf(p2);
+    	return lastOccurance;
+    	//System.out.println("last"+" "+lastOccurance);
     }
 	
   static  	void modifyStrings(String string1, String string2){
@@ -32,12 +57,16 @@ public class OccurancesCount {
 	      elementsList.add(modified1); // added First Element into List
 	     
 	      
-	      // CASE:2 && CASE:3
+	      // CASE:2 
 	      OccurancesCount countOccur = new OccurancesCount();
 	      int num = countOccur.occurancesCount(string1, string2);
 	    //  System.out.println(num);
+	     
 	      if(num>1) {
-	    	  int lastIndex = string1.lastIndexOf(string2);
+	    	  
+	    int lastIndex =	  lastIndexFind(string1,string2);
+	    	 
+	    	 
 	    	  int c1 =0; int c2 = string2.length();
 	    	  StringBuilder modify2 = new StringBuilder("");
 	    	  for(int i=0;i<charArray.length;i++) {
@@ -50,12 +79,24 @@ public class OccurancesCount {
 	    		  c1++;
 	    	  }
 	    	  int c3 = c1+c2;
+	    	
 	    	  for(int i=c3;i<charArray.length;i++) modify2.append(charArray[i]);
 	    	//  System.out.println(modify2);
 	    	  String modified2 = modify2.toString();
 	    	  elementsList.add(modified2);
-	    	  String modify3 = string1.replaceFirst(string2,"");
-	    	  elementsList.add(modify3);
+	    	  
+	    	  
+	    	  
+	    	// && CASE:3
+	    	  StringBuilder modify3 = new StringBuilder("");
+	    	 
+	    	  int  first = firstOccurance(string1,string2);
+	    	  int end = first+string2.length();
+	    	  for(int i=0;i<first;i++) modify3 = modify3.append(charArray[i]);
+	    	  for(int i=end;i<charArray.length;i++) 	  modify3 = modify3.append(charArray[i]);
+	    	//  System.out.println(end);
+	    	String modified3 = modify3.toString();
+	    	  elementsList.add(modified3);
 	      }
 	      else {
 	    	  elementsList.add(string1+string2);
@@ -79,9 +120,9 @@ public class OccurancesCount {
     char [] chArray2 = string2.toCharArray();
             for(int j=0;j<charArray.length;j++) {
             	boolean flag = false;
-            	char p1 = charArray[j];
+            	char p1 = Character.toLowerCase(charArray[j]);
             	for(int k=0;k<chArray2.length;k++) {
-            		char p2 = chArray2[k];
+            		char p2 = Character.toLowerCase(chArray2[k]);
             		if(p1==p2) flag = true;
             		
             	}
@@ -98,7 +139,7 @@ public class OccurancesCount {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
    
-		modifyStrings("javajava","va");
+		modifyStrings("JAVAJAVA","va");
 	}
 
 }
