@@ -20,7 +20,7 @@ public class OccurancesCount {
     		count++;
     	}
     	 
-    System.out.println(count);
+   
     	return count;
     }
     
@@ -120,10 +120,11 @@ static  int   lastIndexFind(String string1, String string2) {
     char [] chArray2 = string2.toCharArray();
             for(int j=0;j<charArray.length;j++) {
             	boolean flag = false;
-            	char p1 = Character.toLowerCase(charArray[j]);
+            	char p1 = charArray[j];
+            	char p2 = Character.toLowerCase(charArray[j]);
             	for(int k=0;k<chArray2.length;k++) {
-            		char p2 = Character.toLowerCase(chArray2[k]);
-            		if(p1==p2) flag = true;
+            		char p3 = Character.toLowerCase(chArray2[k]);
+            		if(p2==p3) flag = true;
             		
             	}
             	if (flag) modify5.append("*");
@@ -139,7 +140,7 @@ static  int   lastIndexFind(String string1, String string2) {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
    
-		modifyStrings("JAVAJAVA","va");
+		modifyStrings("JAVAJAVA","pr");
 	}
 
 }
