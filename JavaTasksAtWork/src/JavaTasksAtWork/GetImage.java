@@ -6,10 +6,11 @@ public class GetImage {
 	String str2 = "";
 	String getImage(String s1) {
 		char[] chArr = s1.toCharArray();
-		str2 = s1+"|";
-		for(int j=s1.length()-1;j>=0;j--) {str2+=chArr[j];}
+		StringBuffer str2 = new StringBuffer(s1+"|");
 		
-		return str2;
+		for(int j=s1.length()-1;j>=0;j--) {str2.append(chArr[j]);}
+		String str3 = str2.toString();
+		return str3;
 	}
 
 	public static void main(String[] args) {
