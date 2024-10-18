@@ -5,8 +5,8 @@ import java.util.TreeSet;
 
 public class GetArrayList {
     static   String[] getArrayList(String[] a1) {
-    	   TreeSet<String> ArrayElements = new TreeSet<String>();
-    	   for(int i=0;i<a1.length;i++) ArrayElements.add(a1[i]);
+    	   TreeSet<String> ArrayElements = new TreeSet<String>(Arrays.asList(a1));
+    	 //  for(int i=0;i<a1.length;i++) ArrayElements.add(a1[i]);
     	   System.out.println(ArrayElements);
     	   String [] updatedArray = new String [a1.length];
     	   int length = updatedArray.length;
