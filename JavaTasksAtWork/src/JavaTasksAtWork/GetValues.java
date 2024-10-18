@@ -14,7 +14,7 @@ public class GetValues {
 			//System.out.println(key+" "+Map.get(key));
 			sortedIntegers.add(Map.get(key));
 		}
-		//System.out.println(sortedIntegers);
+	//	System.out.println(sortedIntegers);
 		return sortedIntegers;
 	}
 	public static void main(String[] args) {
