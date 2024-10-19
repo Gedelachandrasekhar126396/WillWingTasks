@@ -1,32 +1,37 @@
 package JavaTasksAtWork;
 
-import java.util.ArrayList;
+import java.util.*;
 import java.util.HashMap;
 import java.util.StringTokenizer;
 
 public class GetStates {
-     
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-           String combined = "tamilnadu||chennai-karanataka||bengaluru";
-           HashMap<String, String> stateCapitalCombo = new HashMap<String,String>();
-         //  String[] stateCapital = combined.split("||");
-           ArrayList<String> listArr = new ArrayList<String>();
-           
-           String []divideState = combined.split("-");
-           for(int j=0;j<divideState.length;j++) {
-        	 //  System.out.println(divideState[j]);
-        	   String StateCapitalCombo = divideState[j];
-        	   StringTokenizer divideCapital = new StringTokenizer(StateCapitalCombo,"||");
-        	   while (divideCapital.hasMoreTokens()) {
-        		  String token2 = divideCapital.nextToken();
-        		   String token = divideCapital.nextToken();
-        		   stateCapitalCombo.put(token2,token);
-        	   }
-           }
+	static HashMap<String,String> getStates(String combined, String c1,String c2){
+	
+         HashMap<String, String> stateCapitalCombo = new HashMap<String,String>();
+    
          
-      
-    System.out.println(stateCapitalCombo);
+         
+         String []divideState = combined.split(c1);
+         for(int j=0;j<divideState.length;j++) {
+      	 //  System.out.println(divideState[j]);
+      	   String StateCapitalCombo = divideState[j];
+      	   StringTokenizer divideCapital = new StringTokenizer(StateCapitalCombo,c2);
+      	   while (divideCapital.hasMoreTokens()) {
+      		  String token2 = divideCapital.nextToken();
+      		   String token = divideCapital.nextToken();
+      		   stateCapitalCombo.put(token2,token);
+      	   }
+         }  
+        
+         return stateCapitalCombo;
+	}
+	public static void main(String[] args) {
+		
+		 HashMap<String, String> result = new HashMap<String,String>();
+		 
+	result =	getStates("tamilnadu||chennai-karanataka||bengaluru","-","||"); 
+	System.out.println(result);
+
 	}
 	
 
