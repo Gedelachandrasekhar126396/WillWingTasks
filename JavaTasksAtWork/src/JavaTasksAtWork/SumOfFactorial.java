@@ -24,7 +24,7 @@ public class SumOfFactorial {
            
        static int    findSum(int number){
     	   int total =0;
-    	   for(int i=1;i<=number-1;i++) {
+    	   for(int i=0;i<=number-1;i++) {
     		 
     	int fibResult =	  fibonacciSeries(i);
     //	System.out.println(fibResult);
